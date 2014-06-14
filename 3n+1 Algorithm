@@ -1,0 +1,145 @@
+import java.util.Random;
+import java.util.Arrays;
+
+public class Ex301_Algorithm 
+{
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) 
+	{
+		Random ran = new Random();
+		
+		int n1 = 1 + ran.nextInt(21);
+		int seriescount = 0;
+		
+		System.out.println("First Number");
+		while (n1 != 1)
+		{
+			if (n1%2 == 0)
+			{
+				n1 = n1/2;
+			}
+			else
+			{
+				n1 = 3*n1 + 1;
+			}
+			seriescount++;
+			System.out.print(n1 + " ");
+		}
+		System.out.println("\n" + "Count : " +seriescount + "\n");
+		
+		/*Second Number*/
+		
+		int n2 = ran.nextInt(21);
+		int seriescount2 = 0;
+		System.out.println("Second Number");
+		while (n2 != 1)
+		{
+			if (n2%2 == 0)
+			{
+				n2 = n2/2;
+			}
+			else
+			{
+				n2 = 3*n2 + 1;
+			}
+			seriescount2++;
+			System.out.print(n2 + " ");
+		}
+		System.out.println("\n" + "Count : " +seriescount2 + "\n");
+		
+		/*Third Number*/
+		
+		int n3 = ran.nextInt(21);
+		int seriescount3 = 0;
+		System.out.println("Third Number");
+		while (n3 != 1)
+		{
+			if (n3%2 == 0)
+			{
+				n3 = n3/2;
+			}
+			else
+			{
+				n3 = 3*n3 + 1;
+			}
+			seriescount3++;
+			System.out.print(n3 + " ");
+		}
+		System.out.println("\n" + "Count : " +seriescount3 + "\n");
+		
+		/*Fourth Number*/
+		int n4 = ran.nextInt(21);
+		int seriescount4 = 0;
+		System.out.println("Fourth Number");
+		while (n4 != 1)
+		{
+			if (n4%2 == 0)
+			{
+				n4 = n4/2;
+			}
+			else
+			{
+				n4 = 3*n4 + 1;
+			}
+			seriescount4++;
+			System.out.print(n4 + " ");
+		}
+		System.out.println("\n" + "Count : " +seriescount4 + "\n");
+		
+		/*Fifth Number*/
+		int n5 = ran.nextInt(21);
+		int seriescount5 = 0;
+		System.out.println("Fifth Number");
+		while (n5 != 1)
+		{
+			if (n5%2 == 0)
+			{
+				n5 = n5/2;
+			}
+			else
+			{
+				n5 = 3*n5 + 1;
+			}
+			seriescount5++;
+			System.out.print(n5 + " ");
+		}
+		System.out.println("\n" + "Count : " +seriescount5 + "\n");
+		
+		/* Identifying value with the longest series.*/
+		
+		int lseries = 0;
+		int count = 0;
+		
+		if(seriescount > seriescount2 && seriescount > seriescount3 && seriescount > seriescount4 && seriescount > seriescount5)
+		{
+			lseries = n1;
+			count = seriescount;
+		}
+		else if (seriescount2 > seriescount && seriescount2 > seriescount3 && seriescount2 > seriescount4 && seriescount2 > seriescount5)
+		{
+			lseries = n2;
+			count = seriescount2;
+		}
+		else if (seriescount3 > seriescount2 && seriescount3 > seriescount && seriescount3 > seriescount4 && seriescount3 > seriescount5)
+		{
+			lseries = n3;
+			count = seriescount3;
+		}
+		else if (seriescount4 > seriescount2 && seriescount4 > seriescount3 && seriescount4 > seriescount && seriescount4 > seriescount5)
+		{
+			lseries = n4;
+			count = seriescount4;
+		}
+		else
+		{
+			lseries = n5;
+			count = seriescount5;
+		}
+		
+		System.out.println("Value with the most number of series: " +lseries + " " + "with: " +count + " series");
+	}
+
+}
