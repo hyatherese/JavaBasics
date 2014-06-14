@@ -1,0 +1,55 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Ex401 
+{
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) 
+	{
+		Random ran = new Random();
+		Scanner scan = new Scanner(System.in);
+		int answer = ran.nextInt(58) + 42;
+		System.out.println("The correct answer is: " +answer);
+		
+		
+		System.out.println("Guess the number. You have three(3) tries.");
+		System.out.println("Start!");
+		int tries = 0;
+		
+		while (tries < 3)
+		{
+			int guess = scan.nextInt();
+			if (guess > answer + 20)
+			{
+				System.out.println("Lower!");
+			}
+			else if (guess >= answer +1 && guess <= answer + 10)
+			{
+				System.out.println("Warmer!");
+			}
+			else if (guess >= answer +11 && guess <= answer + 20)
+			{
+				System.out.println("Colder!");
+			}
+			else if (guess <  answer)
+			{
+				System.out.println("Higher!");
+			}
+			else if (guess == answer)
+			{
+				System.out.println("You got it!");
+				break;
+			}
+			tries++;
+		}
+		
+		System.out.println("The correct answer is: " +answer);
+		System.out.println("Game Over!");
+		
+		
+	}
+
+}
